@@ -11,11 +11,14 @@ function App() {
     justifyContent: 'center',
     alignItems: 'center',
     width: '100vw',
-    height: '100vh',
+    height: '10vh',
+    opacity: '0.5',
+    position: 'absolute',
+    top: '0',
   }
   return (
     <>
-      <Canvas>
+      <Canvas className='canvas'>
         <OrbitControls />
         <MainContainer />
       </Canvas>
