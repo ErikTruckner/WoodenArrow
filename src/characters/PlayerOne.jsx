@@ -1,9 +1,15 @@
 import { useTexture } from '@react-three/drei'
+import { useFrame } from '@react-three/fiber'
+import { useRef } from 'react'
 
 const PlayerOne = () => {
   const woodTexture = useTexture('../../public/wood_texture.jpg')
+  const groupRef = useRef()
+  useFrame(() => {
+    groupRef.current.rotation.y += 0.02
+  })
   return (
-    <group>
+    <group ref={groupRef}>
       <mesh>
         <sphereGeometry args={[1, 1, 1]} />
         <meshBasicMaterial map={woodTexture} />
