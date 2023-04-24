@@ -1,12 +1,12 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { Canvas } from '@react-three/fiber'
+import { OrbitControls } from '@react-three/drei'
+import MainContainer from './MainContainer'
 import './index.css'
 
 function App() {
   const divStyle = {
     color: 'red',
-    backgroundColor: 'yellow',
+    backgroundColor: 'lightblue',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -15,6 +15,10 @@ function App() {
   }
   return (
     <>
+      <Canvas>
+        <OrbitControls />
+        <MainContainer />
+      </Canvas>
       <div style={divStyle}>
         <h1>Project Wooden Arrow</h1>
       </div>
