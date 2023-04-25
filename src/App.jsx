@@ -21,6 +21,7 @@ function App({ camera }) {
   return (
     <>
       <Canvas>
+        <color attach='background' args={['black']} />
         <OrbitControls />
         <ambientLight />
         <pointLight position={[10, 10, 10]} />
