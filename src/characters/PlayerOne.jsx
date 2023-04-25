@@ -12,7 +12,14 @@ const PlayerOne = () => {
     <group ref={groupRef} scale={0.2}>
       <mesh>
         <sphereGeometry args={[1, 1, 1]} />
-        <meshPhongMaterial color={0xff0ff0} />
+        <meshPhongMaterial
+          color={0xff0ff0}
+          emissive={0xffffff}
+          emissiveIntensity={0.2}
+          reflectivity={1}
+          specular={0xffffff}
+          shininess={100}
+        />
       </mesh>
       <mesh position={[0, -3.5, 0]}>
         <cylinderGeometry args={[-0.2, -0.2, 7, 16]} />
